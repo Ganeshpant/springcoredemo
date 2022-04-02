@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean  class="com.example.demodi.Customer" id = "customer">
+      <constructor-arg name ="id" value="10"/>
+       <constructor-arg name ="name" value="Ganesh"/>  <!-- constructor injection -->
+        <constructor-arg name ="city" value="mnr"/>
+         <constructor-arg name ="age" value="23"/>
+   </bean>
+ <bean class ="com.example.demodi.Address" id = "addressbean">
+ <property name="country" value="Nepal"/>
+ <property name="city" value ="ktm" />
+ <property name="state" value="Su.pa." />
+ 
+ </bean>
+ 
+ <bean class ="com.example.demodi.User" id ="user">
+ <property name="id"  value ="2"/>
+ <property name="name" value="Ganesh"/>
+ <property name="age" value ="23"/>
+ <property name="address" ref ="addressbean"/>
+ 
+ </bean>
+</beans>
